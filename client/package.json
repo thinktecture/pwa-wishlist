@@ -3,15 +3,9 @@
   "version": "0.0.1",
   "license": "MIT",
   "scripts": {
-    "ng": "ng",
-    "start": "http-server dist/ -c-1",
+    "start": "concurrently \"ng build --watch  --progress false\" \"http-server dist/ -s -c-1\"",
     "sw": "sw-precache --root=dist --config=sw-precache-config.js",
-    "dev": "concurrently \"ng build --watch  --progress false\" \"http-server dist/ -s -c-1\"",
-    "build": "ng build",
-    "lint": "ng lint",
-    "report": "lighthouse http://localhost:8080 --view",
-    "preinstall": "npm install -g http-server",
-    "postinstall": "ng build --aot -prod && npm run sw"
+    "report": "lighthouse http://localhost:8080 --view"
   },
   "private": true,
   "dependencies": {
@@ -48,7 +42,8 @@
   "devDependencies": {
     "concurrently": "3.4.0",
     "lighthouse": "1.6.3",
-    "ncp": "2.0.0"
+    "ncp": "2.0.0",
+    "http-server": "0.9.0"
   },
   "engines": {
     "node": "7.7.2",
