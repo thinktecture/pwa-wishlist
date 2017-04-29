@@ -1,0 +1,18 @@
+<div>
+  <div class="form-group">
+    <input type="text" class="form-control" id="title" placeholder="Title" [(ngModel)]="item.title">
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" id="url" placeholder="Url" [(ngModel)]="item.url">
+  </div>
+  <div class="form-group">
+    <textarea class="form-control" id="information" rows="5" placeholder="Information" [(ngModel)]="item.info"></textarea>
+  </div>
+  <div class="form-group">
+    <div class="input-group">
+      <input type="number" class="form-control" id="price" placeholder="Price" [(ngModel)]="item.price">
+      <div class="input-group-addon">€</div>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary right" (click)="save()">Save</button>
+</div>

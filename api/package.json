@@ -1,0 +1,23 @@
+{
+    "name": "pwa-wishlist-api",
+    "version": "0.0.1",
+    "description": "",
+    "main": "src/index.js",
+    "scripts": {
+        "start": "node ./src/index.js"
+    },
+    "license": "MIT",
+    "devDependencies": {
+        "nodemon": "1.11.0"
+    },
+    "dependencies": {
+        "request": "2.75.0",
+        "require-dir": "0.3.0",
+        "restify": "4.1.1",
+        "restify-cors-middleware": "0.0.7"
+    },
+    "engines": {
+        "node": "7.7.2",
+        "npm": "4.1.2"
+    }
+}

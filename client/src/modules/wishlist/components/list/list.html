@@ -1,0 +1,22 @@
+<div class="form-group">
+  <button class="btn btn-primary" (click)="goToAdd()"><i class="fa fa-plus"></i></button>
+</div>
+<div class="list-group">
+  <div class="list-group-item flex-column align-items-start" *ngFor="let item of list">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">{{ item.title }}</h5>
+      <small>2 days ago</small>
+    </div>
+    <p class="mb-2">
+      {{ item.info}}
+    </p>
+    <div class="d-flex w-100 justify-content-between">
+      <small>{{ item.price | number: '1.2-2' }} €</small>
+      <div>
+        <a href="{{item.url}}" *ngIf="item.url" target="_blank"><i class="fa fa-external-link"></i></a>
+        <i class="fa fa-share-alt" (click)="share(item)"></i>
+        <i class="fa fa-trash-o" (click)="deleteItem(item)"></i>
+      </div>
+    </div>
+  </div>
+</div>

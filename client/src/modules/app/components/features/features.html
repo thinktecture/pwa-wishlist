@@ -1,0 +1,37 @@
+<app-content title="Features">
+  Welche Features sind verfügbar.<br>
+  <ul>
+    <li>ServiceWorker
+      <available [value]="serviceWorkerAvailable"></available>
+    </li>
+    <li>Push
+      <available [value]="pushAvailable"></available>
+    </li>
+    <li>Notifications
+      <available [value]="notificationsAvailable"></available>
+    </li>
+    <li>Sync
+      <available [value]="syncAvailable"></available></li>
+    <li>Camera
+      <ul>
+        <li>getUserMedia
+          <available [value]="getUserMediaAvailable"></available>
+        </li>
+      </ul>
+    </li>
+    <li>LocalStorage
+      <available [value]="localStorageAvailable"></available>
+    </li>
+    <li>Web Share API
+      <available [value]="shareAvailable"></available>
+    </li>
+    <li>Cache
+      <available [value]="cacheAvailable"></available>
+    </li>
+  </ul>
+
+  <!-- TODO: Remove at the end. Only for test purposes -->
+  <button class="btn btn-primary" (click)="sendData()">Send message to ServiceWorker</button>
+  <br/><br/>
+  <button class="btn btn-primary" (click)="notify()">Notify</button>
+</app-content>
