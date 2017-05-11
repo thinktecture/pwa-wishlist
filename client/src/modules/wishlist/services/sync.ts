@@ -15,6 +15,6 @@ export class SyncService {
         .then(serviceWorkerRegistration => {
             serviceWorkerRegistration.sync.register('wishlist-data');
         });
-    }, 1000);
+    }, 60000);
   }
 }
